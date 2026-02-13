@@ -1,21 +1,11 @@
 {
-    "buildCommand": "cd frontend && npm install && npm run build",
+    "buildCommand": "npm install && npm run build",
+    "installCommand": "cd frontend && npm install",
     "outputDirectory": "frontend/dist",
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/index.html"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/assets/(.*)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=31536000, immutable"
-                }
-            ]
         }
     ]
 }
